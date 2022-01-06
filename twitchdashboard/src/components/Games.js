@@ -11,7 +11,7 @@ function Games(){
             const result = await api.get('https://api.twitch.tv/helix/games/top');
 			let dataArray = result.data.data;
 			let finalArray = dataArray.map(game => {
-                let newURL = game.box_art_url.replace('{width}', '300').replace('{height}', '300');
+                let newURL = game.box_art_url.replace('{width}', '200').replace('{height}', '200');
 				game.box_art_url = newURL;
 			    return game;
 			});
